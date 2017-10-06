@@ -1,3 +1,6 @@
+# --------------------------------------------
+	# This is for blog addressed 'blog.naver.com'
+# --------------------------------------------
 
 require 'rubygems'
 require 'mechanize'

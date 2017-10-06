@@ -1,3 +1,6 @@
+# --------------------------------------------
+	This is for blog addressed 'blog.me'
+# --------------------------------------------
 
 require 'rubygems'
 require 'mechanize'
