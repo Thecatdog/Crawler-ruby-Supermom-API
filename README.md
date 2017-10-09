@@ -1,12 +1,12 @@
 
-# Naver Blog Crawler
+# Blog Crawler
 
 * README:       https://github.com/Thecatdog/naver_blog_crawler
 * Bug Reports:  https://github.com/Thecatdog/naver_blog_crawler/issues
 
 ## Description
 
-Naver Blog Crawler is an HTML parser for Naver Blog. It is based on Nokogiri and Mechanize.
+Blog Crawler is an HTML parser for Naver Blog. It is based on Nokogiri and Mechanize.
 Nokogiri's features is the ability to search documents via XPath or CSS3 selectors. 
 Mechanize's feature is for following links and submit forms.
 
