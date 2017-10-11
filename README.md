@@ -28,10 +28,10 @@ Mechanize's feature is for following links and submit forms.
 
 
 ## :computer: Overview
-[![image.png](https://s1.postimg.org/4r89tu4kv3/image.png)](https://postimg.org/image/96qoz3gz2z/)
+
 
 ## User menual
-<img src='https://s1.postimg.org/6e5iu4b4ct/menual_en.png' border='0' alt='menual_en'/>
+
 
 ## Ruby version 
 
