@@ -6,8 +6,8 @@
 | . ` | / _` |\ \ / // _ \| '__| | |    | '__|/ _` |\ \ /\ / /| | / _ \| '__|
 | |\  || (_| | \ V /|  __/| |    | \__/\| |  | (_| | \ V  V / | ||  __/| |   
 \_| \_/ \__,_|  \_/  \___||_|     \____/|_|   \__,_|  \_/\_/  |_| \___||_|                                                 
- ```
  
+ ```
 * README:       https://github.com/Thecatdog/naver_blog_crawler
 * Bug Reports:  https://github.com/Thecatdog/naver_blog_crawler/issues
 
@@ -16,29 +16,19 @@ Blog Crawler is an HTML parser for Naver Blog. It is based on Nokogiri and Mecha
 Nokogiri's features is the ability to search documents via XPath or CSS3 selectors. 
 Mechanize's feature is for following links and submit forms.
 
-* The website receives information from the **user (mothers)**, as well as the input of the **child's** information.
-* The server extracts the postings of the **Naver blog post based on the user's information**. The server outputs the most appropriate search results to the user's view.
-* And The server removes the factors that let users worry about the results of the search. 
-* The keywords that appear as a search result are calculated by using their own algorithm.
-* The server then checks the frequency of the observed keyword and arranges it in descending order.
-* Users can be provided **a better growth environment for their children** by using the information that the server has printed on the screen.
 
 ## :pencil2: Features
 
-- [x] List of vaccination for user's child.
-- [x] Measuring a child's growth.
-- [x] Naver Blog scrapping and Information cleanup work.
-- [x] Using ruby gem "twitter-korean-text" to Morphological analysis. 
+- [x] Search with the naver search engine.
+- [x] Link to the Blog pages.
+- [x] Naver Blog Tags scrapping.
+- [x] Scrapping Naver Calendar for festival and Fair.
+- [ ] Naver Blog Main Contents scrapping.
 - [ ] Extracting "Daum" and other various sites of blog posts.
-- [ ] User-defiend preference category.
-- [x] Show festivals and fairs at Calendar automatically.
-- [ ] Extract website with readability that help us more than easy Morphological analysis.
+- [ ] Extract website with readability.
 
 
 ## :computer: Overview
-
-
-## User menual
 
 
 ## Ruby version 
@@ -49,7 +39,6 @@ ruby 2.4.1
 
 * gem install nokogiri
 * gem install mechanize
-
 
 ## Requirement
 
