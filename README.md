@@ -52,9 +52,6 @@ ruby 2.4.1
 ## Development
 
 
-
-## License
-
 ## Methods
  
 * keyword_rslt : get result from searching keyword on Naver main page.
@@ -89,3 +86,5 @@ Replace "sform" and "query" to what you get.
 * crawler/for_blog_me.rb : for blog addressed "blog.me"
 * crawler/location_info.rb : it's scrapping location information like festival or fair.
 
+## License
+[GNU](https://github.com/Thecatdog/naver_crawler/blob/master/LICENSE)
