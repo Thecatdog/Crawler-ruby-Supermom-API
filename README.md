@@ -8,11 +8,12 @@
 \_| \_/ \__,_|  \_/  \___||_|     \____/|_|   \__,_|  \_/\_/  |_| \___||_|                                                 
  
  ```
-* README:       https://github.com/Thecatdog/naver_blog_crawler
-* Bug Reports:  https://github.com/Thecatdog/naver_blog_crawler/issues
+* README:       https://github.com/Thecatdog/naver_crawler
+* Bug Reports:  https://github.com/Thecatdog/naver_crawler/issues
 
 ## :star2: Description
-Blog Crawler is an HTML parser for Naver Blog. It is based on Nokogiri and Mechanize.
+
+Naver Crawler is an HTML parser for [Naver]("http://naver.com"). It is based on Nokogiri and Mechanize.
 Nokogiri's features is the ability to search documents via XPath or CSS3 selectors. 
 Mechanize's feature is for following links and submit forms.
 
@@ -26,9 +27,6 @@ Mechanize's feature is for following links and submit forms.
 - [ ] Naver Blog Main Contents scrapping.
 - [ ] Extracting "Daum" and other various sites of blog posts.
 - [ ] Extract website with readability.
-
-
-## :computer: Overview
 
 
 ## Ruby version 
@@ -46,9 +44,6 @@ ruby 2.4.1
 * require 'mechanize'
 * require 'rest-client
 
-## Development
-
-
 ## Methods
  
 * keyword_rslt : get result from searching keyword on Naver main page.
@@ -63,7 +58,7 @@ ruby 2.4.1
             parameter : blog link uri,
             return value : array of tags
 	    
-__WARNING__
+__PREFERENCE__
 
 This is only for Naver Blog.
 If you want to scrap another page, get page and form name.
@@ -76,6 +71,7 @@ Replace "sform" and "query" to what you get.
 	search_form.field_with(:name=>"query").value = key
 ```
 
+ㅇㅂ
 
 ## Example
 
