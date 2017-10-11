@@ -23,9 +23,9 @@ Mechanize's feature is for following links and submit forms.
 - [x] Search with the naver search engine.
 - [x] Link to the Blog pages.
 - [x] Naver Blog Tags scrapping.
-- [x] Scrapping Naver Calendar for festival and Fair.
 - [ ] Naver Blog Main Contents scrapping.
 - [ ] Extracting "Daum" and other various sites of blog posts.
+- [x] Scrapping Naver Calendar for festival and Fair.
 - [ ] Extract website with readability.
 
 
@@ -58,20 +58,19 @@ ruby 2.4.1
             parameter : blog link uri,
             return value : array of tags
 	    
-__PREFERENCE__
+_NOTE_
 
 This is only for Naver Blog.
 If you want to scrap another page, get page and form name.
 Replace "sform" and "query" to what you get.
 
-```ruby
-	agent = Mechanize.new
-	page = agent.get "http://naver.com"
-	search_form = page.form_with :name => "sform"
-	search_form.field_with(:name=>"query").value = key
 ```
-
-ㅇㅂ
+   ruby
+   agent = Mechanize.new
+   page = agent.get "http://naver.com"
+   search_form = page.form_with :name => "sform"
+   search_form.field_with(:name=>"query").value = key
+```
 
 ## Example
 
@@ -79,5 +78,11 @@ Replace "sform" and "query" to what you get.
 * crawler/for_blog_me.rb : for blog addressed "blog.me"
 * crawler/location_info.rb : it's scrapping location information like festival or fair.
 
+## 📎Deploy with Docker
+
+```
+```
+
 ## License
+
 [GNU](https://github.com/Thecatdog/naver_crawler/blob/master/LICENSE)
