@@ -8,6 +8,7 @@
 \_| \_/ \__,_|  \_/  \___||_|     \____/|_|   \__,_|  \_/\_/  |_| \___||_|                                                 
  
  ```
+ 
 * README:       https://github.com/Thecatdog/naver_crawler
 * Bug Reports:  https://github.com/Thecatdog/naver_crawler/issues
 
@@ -58,7 +59,22 @@ ruby 2.4.1
             parameter : blog link uri,
             return value : array of tags
 
-## Example
+## HOW TO USE
+
+```
+cp ./naver_crawler/crawler/Naver_crawler.rb [your project dir]/lib/
+
+And put below codes at your Controller.
+
+	require '~/workspace/lib/Naver_crawler.rb'
+	naver = Naver_cralwer.new
+
+Then you can use Naver_crawler Class and Methods.
+
+
+```
+
+## FILES
 
 * crawler/noraml_blog.rb : for blog addressed "blog.naver.com"
 * crawler/for_blog_me.rb : for blog addressed "blog.me"
@@ -70,12 +86,14 @@ This is only for Naver Blog.
 If you want to scrap another page, get page and form name.
 Replace "sform" and "query" to what you get.
 
+./naver_crawler/crawler/Naver_crawler.rb
 ```
-   ruby
+   
    agent = Mechanize.new
    page = agent.get "http://naver.com"
    search_form = page.form_with :name => "sform"
    search_form.field_with(:name=>"query").value = key
+   
 ```
 
 ## 📎Deploy with Docker
