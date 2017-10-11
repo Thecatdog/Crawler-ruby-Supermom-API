@@ -1,23 +1,59 @@
 
-# Blog Crawler
 
 * README:       https://github.com/Thecatdog/naver_blog_crawler
 * Bug Reports:  https://github.com/Thecatdog/naver_blog_crawler/issues
 
-## Description
-
+## :star2: Description
 Blog Crawler is an HTML parser for Naver Blog. It is based on Nokogiri and Mechanize.
 Nokogiri's features is the ability to search documents via XPath or CSS3 selectors. 
 Mechanize's feature is for following links and submit forms.
 
-## System dependencies
+* The website receives information from the **user (mothers)**, as well as the input of the **child's** information.
+* The server extracts the postings of the **Naver blog post based on the user's information**. The server outputs the most appropriate search results to the user's view.
+* And The server removes the factors that let users worry about the results of the search. 
+* The keywords that appear as a search result are calculated by using their own algorithm.
+* The server then checks the frequency of the observed keyword and arranges it in descending order.
+* Users can be provided **a better growth environment for their children** by using the information that the server has printed on the screen.
 
-* Nokogiri 1.8.1
-* Mechanize 2.7
+## :pencil2: Features
+
+- [x] List of vaccination for user's child.
+- [x] Measuring a child's growth.
+- [x] Naver Blog scrapping and Information cleanup work.
+- [x] Using ruby gem "twitter-korean-text" to Morphological analysis. 
+- [ ] Extracting "Daum" and other various sites of blog posts.
+- [ ] User-defiend preference category.
+- [x] Show festivals and fairs at Calendar automatically.
+- [ ] Extract website with readability that help us more than easy Morphological analysis.
+
+
+## :computer: Overview
+[![image.png](https://s1.postimg.org/4r89tu4kv3/image.png)](https://postimg.org/image/96qoz3gz2z/)
+
+## User menual
+<img src='https://s1.postimg.org/6e5iu4b4ct/menual_en.png' border='0' alt='menual_en'/>
 
 ## Ruby version 
 
 ruby 2.4.1
+
+## API Reference
+
+* gem install nokogiri
+* gem install mechanize
+
+
+## Requirement
+
+* require 'rubygems'
+* require 'mechanize'
+* require 'rest-client
+
+## Development
+
+
+
+## License
 
 ## Methods
  
@@ -32,25 +68,7 @@ ruby 2.4.1
 * get_tag : get tags from blog content.
             parameter : blog link uri,
             return value : array of tags
-
-
-## Example
-
-* crawler/noraml_blog.rb : for blog addressed "blog.naver.com"
-* crawler/for_blog_me.rb : for blog addressed "blog.me"
-* crawler/location_info.rb : it's scrapping location information like festival or fair.
-
-## API Reference
-
-* gem install nokogiri
-* gem install mechanize
-
-## Requirement
-
-* require 'rubygems'
-* require 'mechanize'
-* require 'rest-client
-
+	    
 __WARNING__
 
 This is only for Naver Blog.
@@ -64,9 +82,10 @@ Replace "sform" and "query" to what you get.
 	search_form.field_with(:name=>"query").value = key
 ```
 
-## Development
 
+## Example
 
-## License
-
+* crawler/noraml_blog.rb : for blog addressed "blog.naver.com"
+* crawler/for_blog_me.rb : for blog addressed "blog.me"
+* crawler/location_info.rb : it's scrapping location information like festival or fair.
 
