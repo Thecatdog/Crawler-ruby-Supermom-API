@@ -57,7 +57,13 @@ ruby 2.4.1
 * get_tag : get tags from blog content.
             parameter : blog link uri,
             return value : array of tags
-	    
+
+## Example
+
+* crawler/noraml_blog.rb : for blog addressed "blog.naver.com"
+* crawler/for_blog_me.rb : for blog addressed "blog.me"
+* crawler/location_info.rb : it's scrapping location information like festival or fair.
+
 _NOTE_
 
 This is only for Naver Blog.
@@ -71,12 +77,6 @@ Replace "sform" and "query" to what you get.
    search_form = page.form_with :name => "sform"
    search_form.field_with(:name=>"query").value = key
 ```
-
-## Example
-
-* crawler/noraml_blog.rb : for blog addressed "blog.naver.com"
-* crawler/for_blog_me.rb : for blog addressed "blog.me"
-* crawler/location_info.rb : it's scrapping location information like festival or fair.
 
 ## 📎Deploy with Docker
 
