@@ -101,9 +101,6 @@ Replace "sform" and "query" to what you get.
 _EXAMPLE_
 * www.daum.net
 
-[](https://github.com/Thecatdog/naver_crawler/document_files/docuement1.png)
-[](https://github.com/Thecatdog/naver_crawler/document_files/docuement2.png)
-
 ```
 
 ```
@@ -112,3 +109,4 @@ _EXAMPLE_
 ## License
 
 [GNU](https://github.com/Thecatdog/naver_crawler/blob/master/LICENSE)
+
