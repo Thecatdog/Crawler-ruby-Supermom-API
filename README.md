@@ -81,7 +81,8 @@ Then you can use Naver_crawler Class and Methods.
 * crawler/for_blog_me.rb : for blog addressed "blog.me"
 * crawler/location_info.rb : it's scrapping location information like festival or fair.
 
-_NOTE_
+
+## Expanding
 
 This is only for Naver Blog.
 If you want to scrap another page, get page and form name.
@@ -97,10 +98,13 @@ Replace "sform" and "query" to what you get.
    
 ```
 
-## 📎Deploy with Docker
+_EXAMPLE_
+www.daum.net
 
 ```
+
 ```
+
 
 ## License
 
