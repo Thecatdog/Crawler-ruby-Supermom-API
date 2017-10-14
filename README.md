@@ -105,7 +105,7 @@ _EXAMPLE_
 	Replace "sform" to "daumSearch" and "query" to "q".
 	
 	agent = Mechanize.new
-	page = agent.get "http://naver.com"
+	page = agent.get "http://daum.net"
 	search_form = page.form_with :name => "daumSearch"
 	search_form.field_with(:name=>"q").value = key
 	
