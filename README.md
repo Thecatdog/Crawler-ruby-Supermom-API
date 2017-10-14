@@ -91,10 +91,10 @@ Replace "sform" and "query" to what you get.
 ./naver_crawler/crawler/Naver_crawler.rb
 ```
    
-   agent = Mechanize.new
-   page = agent.get "http://naver.com"
-   search_form = page.form_with :name => "sform"
-   search_form.field_with(:name=>"query").value = key
+	agent = Mechanize.new
+	page = agent.get "http://naver.com"
+	search_form = page.form_with :name => "sform"
+	search_form.field_with(:name=>"query").value = key
    
 ```
 
@@ -102,6 +102,15 @@ _EXAMPLE_
 * www.daum.net
 
 ```
+	Replace "sform" to "daumSearch" and "query" to "q".
+	
+	agent = Mechanize.new
+	page = agent.get "http://naver.com"
+	search_form = page.form_with :name => "daumSearch"
+	search_form.field_with(:name=>"q").value = key
+	
+	Then You can access to Daum.
+	For test, Try "puts page.link" and "puts page.text".
 
 ```
 
