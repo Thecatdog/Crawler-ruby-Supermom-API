@@ -10,11 +10,18 @@ class Naver_crawler
 
 	# blog 본문에 들어가 tag를 가져오는 메소드 시작
 	def get_tag(blog_link_uri)
-
 		agent = Mechanize.new
+		@tags = []
+		
+		# 새로운 에러
+		# blog.me가 agent를 통해서 들어가게 되면 blog.com으로 바뀌는 현상
+		# agent를 if문 밖으로 빼서 blog_link_uri 를 갱신
+		# html 변수는 if문에서 계속 사용해야하므로 밖에서 영향력 없이 사용가능하도록 세팅 
+
+		html = agent.get(blog_link_uri)
+		blog_link_uri = html.uri.to_s
 
 		if blog_link_uri.include? "blog.me"
-			html = agent.get(blog_link_uri)
 			second_uri = html.search('frame').attr('src')
 			page = agent.get(second_uri)
 			page = page.search('frame').attr('src')
@@ -22,15 +29,15 @@ class Naver_crawler
 		else
 			blog_link_uri = blog_link_uri.gsub("http://", "http://m.")
 		end
-
+	
 		page  = agent.get(blog_link_uri)
-
 		page.search('div.post_tag').each do |t|
-	  		puts t.text.gsub('#', '')
+	  		@tags= t.text.gsub('#', '')
+	  		puts @tags
 	  	end
-
+	
 		# 원래 페이지로 돌아가기
-		return
+		return @tags
 	end
 	# blog 본문에 들어가 tag를 가져오는 메소드 끝
 	

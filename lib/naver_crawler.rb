@@ -34,9 +34,9 @@ class Naver_cralwer
 	  		puts @tags
 	  	end
 	
-	# 원래 페이지로 돌아가기
-	return @tags
-end
+		# 원래 페이지로 돌아가기
+		return @tags
+	end
 	# blog 본문에 들어가 tag를 가져오는 메소드 끝
 	# -----------------------------------------
 	
