@@ -13,7 +13,8 @@
  
 
  
-* README:       https://github.com/Thecatdog/Naver_Crawler-ruby-Supermom-API
+* README_EN:       https://github.com/Thecatdog/Naver_Crawler-ruby-Supermom-API
+* README_KOR: https://github.com/Thecatdog/Naver_Crawler-ruby-Supermom-API/blob/master/README-ko.md
 * Bug Reports:  https://github.com/Thecatdog/Naver_Crawler-ruby-Supermom-API/issues
 
 ## :star2: Description
