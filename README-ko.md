@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/Thecatdog/naver_crawler.png?branch=master)](https://travis-ci.org/Thecatdog/naver_crawler)
+![image.png](https://img.shields.io/badge/naver__crawler-v01-green.svg)
  ```
 
 ███╗   ██╗ █████╗ ██╗   ██╗███████╗██████╗      ██████╗██████╗  █████╗ ██╗    ██╗██╗     ███████╗██████╗ 
@@ -10,8 +11,9 @@
                                                                                                                   
  ```
  
-* README:       https://github.com/Thecatdog/naver_crawler
-* Bug Reports:  https://github.com/Thecatdog/naver_crawler/issues
+* README_EN:       https://github.com/Thecatdog/Naver_Crawler-ruby-Supermom-API
+* README_KOR: https://github.com/Thecatdog/Naver_Crawler-ruby-Supermom-API/blob/master/README-ko.md
+* Bug Reports:  https://github.com/Thecatdog/Naver_Crawler-ruby-Supermom-API/issues
 
 ## :star2: Description
 
@@ -31,7 +33,7 @@ Nokogiri 와 Mechanize 모두 HTML 파일을 파싱하는 크롤러지만, 각 �
 
 ## Ruby version 
 
-ruby 2.4.1
+![image.png](https://img.shields.io/badge/ruby-v%20--%202.4.1-red.svg)
 
 ## API Reference
 
