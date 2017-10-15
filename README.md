@@ -10,6 +10,8 @@
                                                                                                                   
  ```
  
+[![Build Status](https://travis-ci.org/Thecatdog/naver_crawler.png?branch=master)](https://travis-ci.org/Thecatdog/naver_crawler)
+ 
 * README:       https://github.com/Thecatdog/naver_crawler
 * Bug Reports:  https://github.com/Thecatdog/naver_crawler/issues
 
