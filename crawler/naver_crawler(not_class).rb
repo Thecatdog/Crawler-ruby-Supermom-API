@@ -24,26 +24,36 @@
 # blog 본문에 들어가 tag를 가져오는 메소드 시작
 
 def get_tag(blog_link_uri)
-	agent = Mechanize.new
+		agent = Mechanize.new
+		@tags = []
+		
+		# 새로운 에러
+		# blog.me가 agent를 통해서 들어가게 되면 blog.com으로 바뀌는 현상
+		# agent를 if문 밖으로 빼서 blog_link_uri 를 갱신
+		# html 변수는 if문에서 계속 사용해야하므로 밖에서 영향력 없이 사용가능하도록 세팅 
 
-	if blog_link_uri.include? "blog.me"
 		html = agent.get(blog_link_uri)
-		second_uri = html.search('frame').attr('src')
-		page = agent.get(second_uri)
-		page = page.search('frame').attr('src')
-		blog_link_uri = "http://m.blog.naver.com" + page
-	else
-		blog_link_uri = blog_link_uri.gsub("http://", "http://m.")
-	end
+		blog_link_uri = html.uri.to_s
 
-	page  = agent.get(blog_link_uri)
+		# 
+
+		if blog_link_uri.include? "blog.me"
+			second_uri = html.search('frame').attr('src')
+			page = agent.get(second_uri)
+			page = page.search('frame').attr('src')
+			blog_link_uri = "http://m.blog.naver.com" + page
+		else
+			blog_link_uri = blog_link_uri.gsub("http://", "http://m.")
+		end
 	
-	page.search('div.post_tag').each do |t|
-  		puts t.text.gsub('#', '')
-  	end
-
+		page  = agent.get(blog_link_uri)
+		page.search('div.post_tag').each do |t|
+	  		@tags= t.text.gsub('#', '')
+	  		puts @tags
+	  	end
+	
 	# 원래 페이지로 돌아가기
-	return
+	return @tags
 end
 
 # blog 본문에 들어가 tag를 가져오는 메소드 끝
@@ -57,7 +67,7 @@ require 'rest-client'
 agent = Mechanize.new
 page = agent.get "http://naver.com"
 search_form = page.form_with :name => "sform"
-search_form.field_with(:name=>"query").value = "장난감"
+search_form.field_with(:name=>"query").value = "유아 장난감"
 search_results = agent.submit search_form
 main_uri = search_results.uri
 # puts main_uri
@@ -67,7 +77,7 @@ page = agent.page.link_with(:text => '블로그').click
 
 
 # 페이지를 5번째 페이지까지
-for i in 2..5
+for i in 1..5
 
 	html = agent.get(page.uri).body
 	html_doc = Nokogiri::HTML(html)
@@ -90,15 +100,19 @@ for i in 2..5
 		puts "큰 한바퀴 "
 		puts i
 
-	for j in 1..9
+	for j in 0..8
 		blog_link_uri = blog_head[j].attr('href')
 		puts "작은 한바퀴"
 		puts j
 		puts blog_link_uri
 
+		ary = Array.new	
 		# 주소가 blog와 관련된 것만 태그를 뽑아옴 
-		if blog_link_uri.include? "blog"
-			get_tag(blog_link_uri)
-		end	
+		if blog_link_uri.include? "blog.me"
+			ary=get_tag(blog_link_uri)
+		elsif blog_link_uri.include? "blog.naver.com"
+			ary=get_tag(blog_link_uri)
+		else
+		end
 	end
 end
