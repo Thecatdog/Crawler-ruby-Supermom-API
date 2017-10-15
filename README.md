@@ -37,7 +37,7 @@ Mechanize's feature is for following links and submit forms.
 
 ## Ruby version 
 
-ruby 2.4.1
+![image.png](https://img.shields.io/badge/ruby-v%20--%202.4.1-red.svg)
 
 ## API Reference
 
