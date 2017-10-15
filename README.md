@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Thecatdog/naver_crawler.png?branch=master)](https://travis-ci.org/Thecatdog/naver_crawler)
+[![Build Status](https://travis-ci.org/Thecatdog/Naver_Crawler-ruby-Supermom-API.png?branch=master)](https://travis-ci.org/Thecatdog/Naver_Crawler-ruby-Supermom-API)
  ```
 
 ███╗   ██╗ █████╗ ██╗   ██╗███████╗██████╗      ██████╗██████╗  █████╗ ██╗    ██╗██╗     ███████╗██████╗ 
@@ -12,8 +12,8 @@
  
 
  
-* README:       https://github.com/Thecatdog/naver_crawler
-* Bug Reports:  https://github.com/Thecatdog/naver_crawler/issues
+* README:       https://github.com/Thecatdog/Naver_Crawler-ruby-Supermom-API
+* Bug Reports:  https://github.com/Thecatdog/Naver_Crawler-ruby-Supermom-API/issues
 
 ## :star2: Description
 
@@ -119,5 +119,5 @@ _EXAMPLE_
 
 ## License
 
-[GNU](https://github.com/Thecatdog/naver_crawler/blob/master/LICENSE)
+[GNU](https://github.com/Thecatdog/Naver_Crawler-ruby-Supermom-API/blob/master/LICENSE)
 
