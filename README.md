@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/Thecatdog/naver_crawler.png?branch=master)](https://travis-ci.org/Thecatdog/naver_crawler)
+[![Build Status](https://travis-ci.org/Thecatdog/Supermom-Front.png?branch=master)](https://travis-ci.org/Thecatdog/Supermom-Front)
+![image.png](https://img.shields.io/badge/naver__crawler-v01-green.svg)
  ```
 
 ███╗   ██╗ █████╗ ██╗   ██╗███████╗██████╗      ██████╗██████╗  █████╗ ██╗    ██╗██╗     ███████╗██████╗ 
