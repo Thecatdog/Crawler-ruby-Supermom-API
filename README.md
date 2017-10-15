@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Thecatdog/Naver_Crawler-ruby-Supermom-API.png?branch=master)](https://travis-ci.org/Thecatdog/Naver_Crawler-ruby-Supermom-API)
+[![Build Status](https://travis-ci.org/Thecatdog/naver_crawler.png?branch=master)](https://travis-ci.org/Thecatdog/naver_crawler)
  ```
 
 ███╗   ██╗ █████╗ ██╗   ██╗███████╗██████╗      ██████╗██████╗  █████╗ ██╗    ██╗██╗     ███████╗██████╗ 
