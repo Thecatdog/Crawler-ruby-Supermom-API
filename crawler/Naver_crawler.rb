@@ -7,10 +7,16 @@ class Naver_crawler
 	require 'rubygems'
 	require 'mechanize'
 	require 'rest-client'
+	require 'resolv-replace.rb' 
 
 	# blog 본문에 들어가 tag를 가져오는 메소드 시작
 	def get_tag(blog_link_uri)
 		agent = Mechanize.new
+
+		agent.ignore_bad_chunking = true
+		agent.follow_meta_refresh = true
+		agent.user_agent_alias = 'Windows Chrome'
+
 		@tags = []
 		
 		# 새로운 에러
@@ -48,6 +54,11 @@ class Naver_crawler
 	def blog_search(keyword)
 		
 		agent = Mechanize.new
+
+		agent.ignore_bad_chunking = true
+		agent.follow_meta_refresh = true
+		agent.user_agent_alias = 'Windows Chrome'
+
 		page = agent.get "http://naver.com"
 		search_form = page.form_with :name => "sform"
 		search_form.field_with(:name=>"query").value = keyword
@@ -65,6 +76,11 @@ class Naver_crawler
 		# 페이지를 5번째 페이지까지
 		for i in 2..size
 			agent = Mechanize.new
+
+			agent.ignore_bad_chunking = true
+			agent.follow_meta_refresh = true
+			agent.user_agent_alias = 'Windows Chrome'
+
 			html = agent.get(page.uri).body
 			html_doc = Nokogiri::HTML(html)
 			blog_section = html_doc.css('ul#elThumbnailResultArea.type01')
@@ -90,6 +106,11 @@ class Naver_crawler
 	def body_of_blog
 
 		agent = Mechanize.new
+
+		agent.ignore_bad_chunking = true
+		agent.follow_meta_refresh = true
+		agent.user_agent_alias = 'Windows Chrome'
+
 		page = agent.page.link_with(:text => '다음페이지').click
 
 		for j in 1..9

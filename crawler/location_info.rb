@@ -13,11 +13,17 @@
 require 'rubygems'
 require 'mechanize'
 require 'rest-client'
+require 'resolv-replace.rb' 
 
 search_arr = ['축제', '베이비페어']
 
 search_arr.each do | search |
 	agent = Mechanize.new
+
+	agent.ignore_bad_chunking = true
+	agent.follow_meta_refresh = true
+	agent.user_agent_alias = 'Windows Chrome'
+
 	page = agent.get "http://naver.com"
 	search_form = page.form_with :name => "sform"
 	search_form.field_with(:name=>"query").value = search

@@ -25,6 +25,11 @@
 
 def get_tag(blog_link_uri)
 		agent = Mechanize.new
+
+		agent.ignore_bad_chunking = true
+		agent.follow_meta_refresh = true
+		agent.user_agent_alias = 'Windows Chrome'
+
 		@tags = []
 		
 		# 새로운 에러
@@ -62,9 +67,15 @@ end
 require 'rubygems'
 require 'mechanize'
 require 'rest-client'
+require 'resolv-replace.rb' 
 
 # main가져오기
 agent = Mechanize.new
+
+agent.ignore_bad_chunking = true
+agent.follow_meta_refresh = true
+agent.user_agent_alias = 'Windows Chrome'
+
 page = agent.get "http://naver.com"
 search_form = page.form_with :name => "sform"
 search_form.field_with(:name=>"query").value = "유아 장난감"
