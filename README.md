@@ -86,7 +86,7 @@ Then you can use Naver_crawler Class and Methods.
 * crawler/location_info.rb : it's scrapping location information like festival or fair.
 
 
-## Expanding
+# Expanding
 
 This is only for Naver Blog.
 If you want to scrap another page, get page and form name.
@@ -95,7 +95,7 @@ Replace "sform" and "query" to what you get.
 1. Create Mechanize object
 2. Set page url to Crawling
 
-# Search Engine
+## Search Engine
 1. Get form value, and query value.
 2. Input your keyword to Search.
 3. Then You can get a uri, searched with your keyword.
@@ -109,7 +109,7 @@ Replace "sform" and "query" to what you get.
    
 ```
 
-# Get Tag Value
+## Get Tag Value
 Now you can use Nokogiri for getting value.
 1. Get body from Mechanize uri.
 2. Get Nokogiri object with Mechanize uri.
@@ -120,7 +120,7 @@ Now you can use Nokogiri for getting value.
 	html_doc = Nokogiri::HTML(html)
 ```
 
-# Shift to Link 
+## Shift to Link 
 1. Create agent object.
 2. Use 'link_with' method and 'Click' method.
 3. Then You can get new link uri.
