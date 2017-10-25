@@ -92,14 +92,42 @@ This is only for Naver Blog.
 If you want to scrap another page, get page and form name.
 Replace "sform" and "query" to what you get.
 
-./naver_crawler/crawler/Naver_crawler.rb
+1. Create Mechanize object
+2. Set page url to Crawling
+
+# Search Engine
+1. Get form value, and query value.
+2. Input your keyword to Search.
+3. Then You can get a uri, searched with your keyword.
+
 ```
-   
-	agent = Mechanize.new
+
+	agent = Mechanize.new 
 	page = agent.get "http://naver.com"
 	search_form = page.form_with :name => "sform"
 	search_form.field_with(:name=>"query").value = key
    
+```
+
+# Get Tag Value
+Now you can use Nokogiri for getting value.
+1. Get body from Mechanize uri.
+2. Get Nokogiri object with Mechanize uri.
+3. Then You can get Tag Value with CSS selector. 
+
+```
+	html = agent.get(page.uri).body
+	html_doc = Nokogiri::HTML(html)
+```
+
+# Shift to Link 
+1. Create agent object.
+2. Use 'link_with' method and 'Click' method.
+3. Then You can get new link uri.
+
+```
+	agent = Mechanize.new 
+	page = agent.page.link_with(:text => "next_page").click
 ```
 
 _EXAMPLE_
